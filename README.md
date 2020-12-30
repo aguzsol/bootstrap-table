@@ -1,3 +1,5 @@
+Proyecto realizado con (https://github.com/pppeedrito).
+
 # El Covid19 en el mundo
 
 Vamos a utlizar una API para obtener datos sobre la situación del Covid19 en el mundo. Vamos a usar uno de los __endpoint__ que nos ofrecen en esta [Web](https://corona.lmao.ninja/docs/#/COVID-19%3A%20Worldometers)
