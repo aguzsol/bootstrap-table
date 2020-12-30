@@ -1,0 +1,51 @@
+window.onload = traerDatos();
+
+
+
+function traerDatos() {
+
+    console.log("dentro funcion");
+
+
+
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.open('GET', 'https://corona.lmao.ninja/v3/covid-19/countries/Spain,Italy,Germany,Poland,Finland', true);
+
+
+
+    xhttp.onreadystatechange = function () {
+
+        if (this.readyState == 4 && this.status == 200) {
+
+            //console.log(this.responseText);
+
+            let datos = JSON.parse(this.responseText);
+
+            console.log(datos)
+
+            //let joke = document.querySelector('#displayJoke');
+
+           // joke.innerHTML = `${datos.value}​​`;
+           $.get(url + '?' + $.param(params.data)).then(function (res) {
+            params.success(res)
+          })
+
+
+
+        }
+
+    }
+
+    xhttp.send();
+}
+
+
+<table id="table" data-toggle="table">
+      <tr>
+        <th id="nombrePais">Nombre país</th>
+        <th id="nombrePoblacion">Población</th>
+        <th id="numCasosActivos">Casos activos por millón de habitantes</th>
+        <th id="fechaAct">Últimza actualización de los datos</th>
+      </tr>
+    </table>
